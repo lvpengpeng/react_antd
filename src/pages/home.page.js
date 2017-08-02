@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'antd/dist/antd.css'
+import Maps from '../components/maps.component'
 import Tel from '../components/tel.component'
 import Carousels from '../components/carousel.component'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
@@ -37,11 +38,11 @@ export default class Home extends Component {
                             defaultOpenKeys={['sub1']}
                             style={{ height: '100%', borderRight: 0 }}
                         >
-                            <SubMenu key="sub1" title={<span><Icon type="user" />subnav 1</span>}>
-                               <Menu.Item key="1"> <Link to="/">option1</Link></Menu.Item>
-                                <Menu.Item key="2"><Link to="/about">option2</Link></Menu.Item>
-                                <Menu.Item key="3">option3</Menu.Item>
-                                <Menu.Item key="4">option4</Menu.Item>
+                            <SubMenu key="sub1" title={<span><Icon type="user" />菜单1</span>}>
+                               <Menu.Item key="1"> <Link to="/">饼状图</Link></Menu.Item>
+                                <Menu.Item key="2"><Link to="/about">走马灯</Link></Menu.Item>
+                                <Menu.Item key="3"><Link to="/tel">tabel表</Link></Menu.Item>
+                                {/*<Menu.Item key="4">option4</Menu.Item>*/}
                             </SubMenu>
                             <SubMenu key="sub2" title={<span><Icon type="laptop" />subnav 2</span>}>
                                 <Menu.Item key="5">option5</Menu.Item>
@@ -64,8 +65,9 @@ export default class Home extends Component {
                             <Breadcrumb.Item>App</Breadcrumb.Item>
                         </Breadcrumb>
                         <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 506 }}>
-                             <Route exact path="/" component={Tel}/>
+                             <Route exact path="/" component={Maps}/>
                              <Route path="/about" component={Carousels}/>
+                             <Route path="/tel" component={Tel}/>
                         </Content>
                     </Layout>
                 </Layout>
