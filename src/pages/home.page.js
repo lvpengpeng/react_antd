@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'antd/dist/antd.css'
+import './home.page.css'
 import Maps from '../components/maps.component'
 import Tel from '../components/tel.component'
 import Carousels from '../components/carousel.component'
